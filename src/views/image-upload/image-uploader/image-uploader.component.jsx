@@ -31,7 +31,7 @@ function ImageUploader() {
     <div>
       <input
         type="file"
-        name="myImage"
+        name="files"
         onChange={onChange}
       />
     </div>
