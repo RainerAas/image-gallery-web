@@ -22,6 +22,20 @@
         "import/prefer-default-export": "off",
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
-        "no-restricted-exports": ["error", { "restrictedNamedExports": [] }]
+        "no-restricted-exports": [
+            "error",
+            {
+                "restrictedNamedExports": []
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": [
+                    "src"
+                ]
+            }
+        }
     }
 }
