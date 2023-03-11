@@ -30,6 +30,7 @@ function ImageUploader() {
   return (
     <div>
       <input
+        multiple
         type="file"
         name="files"
         onChange={onChange}
