@@ -10,11 +10,13 @@ const propTypes = {
   width: PropTypes.number.isRequired,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 const defaultProps = {
   onMouseEnter: undefined,
   onMouseLeave: undefined,
+  onClick: undefined,
 };
 
 function Image(props) {
@@ -26,6 +28,7 @@ function Image(props) {
     width,
     onMouseEnter,
     onMouseLeave,
+    onClick,
   } = props;
 
   const [loading, setLoading] = useState(true);
@@ -54,6 +57,7 @@ function Image(props) {
         hasLoaded={!loading}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onClick={onClick}
       />
       {showBlur && (
         <Styled.BlurImage

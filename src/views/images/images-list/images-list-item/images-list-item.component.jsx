@@ -8,6 +8,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import * as Styled from './images-list-item.styles';
 
 const propTypes = {
+  index: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
@@ -15,10 +16,12 @@ const propTypes = {
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
   onDelete: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 function ImagesListItem(props) {
   const {
+    index,
     id,
     name,
     src,
@@ -26,6 +29,7 @@ function ImagesListItem(props) {
     height,
     width,
     onDelete,
+    onClick,
   } = props;
 
   const theme = useTheme();
@@ -45,6 +49,7 @@ function ImagesListItem(props) {
     }
   }, [isMobile]);
 
+  const onImageClick = useCallback(() => onClick(index), [index, onClick]);
   const onMouseEnter = useCallback(() => setHovering(true), []);
   const onMouseLeave = useCallback(() => {
     setHovering(false);
@@ -61,6 +66,7 @@ function ImagesListItem(props) {
         width={width}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onClick={onImageClick}
       />
       <Styled.Button
         onClick={isConfirmation ? onConfirm : onAttemptDelete}
