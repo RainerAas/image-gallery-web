@@ -8,7 +8,7 @@ import ImagesList from './images-list';
 import ImagesPlaceholder from './images-placeholder';
 
 function Images() {
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState();
 
   const fetchImages = useCallback(async () => {
     const { data } = await api.get({ url: '/images' });
@@ -23,10 +23,12 @@ function Images() {
     fetchImages();
   }, [fetchImages]);
 
-  return (images.length ? (
-    <ImagesList images={images} onImageDelete={onImageDelete} />
-  ) : (
-    <ImagesPlaceholder />
+  return (images && (
+    images.length ? (
+      <ImagesList images={images} onImageDelete={onImageDelete} />
+    ) : (
+      <ImagesPlaceholder />
+    )
   ));
 }
 
