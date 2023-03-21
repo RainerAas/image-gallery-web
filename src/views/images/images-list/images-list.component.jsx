@@ -12,9 +12,11 @@ import {
   Alert,
 } from '@mui/material';
 import Lightbox from 'yet-another-react-lightbox';
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import ImagesListItem from './images-list-item';
-// eslint-disable-next-line import/no-unresolved
-import 'yet-another-react-lightbox/styles.css'; // TODO: Fix and import styles only that are needed (make custom style)
 
 const propTypes = {
   images: PropTypes.arrayOf(PropTypes.shape({
@@ -98,6 +100,7 @@ function ImagesListComponent(props) {
         index={lightboxState.index}
         close={closeLightbox}
         slides={images}
+        plugins={[Thumbnails, Zoom]}
       />
     </>
   );
