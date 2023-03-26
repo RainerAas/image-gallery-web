@@ -1,6 +1,36 @@
-# Getting Started with Create React App
+# Image Gallery - Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front-end application part of the Image Gallery project. The project is made with best technologies and practices in mind and is the perfect base application for anyone wanting to play around with it or build a new application on.  
+
+**The back-end API part of this project is found [here](https://github.com/RainerAas/image-gallery-api)**.
+
+The project is built using **React.js**.
+
+## Features
+
+In conjunction with the API, the application supports:
+
+* image upload (both singular and multiple image files) by either drag and drop or browsing and selecting from your local file system,
+* image deleting,
+* browsing with a lightbox that is capable of zooming and shows a thumbnail track,
+* image lazy loading with the placeholder being a BlurHash image,
+* image gallery viewing.  
+
+**Note: the application by default supports .PNG, .JPEG/.JPG and .WEBP files up to 10MB. Those limits can be changed in the back-end API. For changing the image formats you must also update the `fileTypes` array in `...src\views\image-upload\image-uploader\image-uploader.component.jsx`.**
+
+## Installation
+
+Start by cloning the project to your own machine and then install the packages by using npm.
+
+```bash
+  npm install
+```
+    
+## Usage
+
+You must create a file inside the project directory named **.env** and put your API URL there which, if you are running the API part of the project locally, is most likely http://localhost:3000/api/v1. An example of this can be found in the file called **.env.exmaple**.  
+
+Then, if your API is running you can run `npm start` to run the project locally. More about the available scripts is written down below.
 
 ## Available Scripts
 
@@ -8,24 +38,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.  
 You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.  
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.  
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.  
+Your app is ready to be deployed!  
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
@@ -39,32 +68,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Rainer Aas](https://github.com/RainerAas)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
