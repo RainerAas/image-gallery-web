@@ -30,7 +30,13 @@ Start by cloning the project to your own machine and then install the packages b
 
 You must create a file inside the project directory named **.env** and put your API URL there which, if you are running the API part of the project locally, is most likely http://localhost:3000/api/v1. An example of this can be found in the file called **.env.exmaple**.  
 
-Then, if your API is running you can run `npm start` to run the project locally. More about the available scripts is written down below.
+Then, if your API is running you can run `npm start` to run the project locally. More about the available scripts is written down below.  
+
+To upload an image, navigate to the **Image Upload** view from the navigation bar above the content of the webpage. From there you may click on the outlined box to browse your local file system or drag your selected files to said box.  
+
+To view uploaded images, navigate to **Images** view from the navigation bar. From there you may click on the images to view them in a lightbox. The lightbox supports keyboard, mouse, touchpad and touchscreen navigation and you may also zoom with said controls. Zooming is also possible by clicking the magnifying glass icon on the upper right side of the lightbox.  
+
+To delete an image on PC, hover your cursor over the image and an trashcan icon will appear on the top right side of the image you are hovering over. Then click the trash can icon and a check icon will appear instead which signifies confirmation. Once you click the check icon, the application will attempt to remove said image. You will get a notification notifying if the deletion was successful or not. To delete an image on mobile devices, hovering is not necessary and the icon will always be apparent.
 
 ## Available Scripts
 
