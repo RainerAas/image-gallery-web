@@ -20,6 +20,8 @@ In conjunction with the API, the application supports:
 
 ## Installation
 
+**Note: you need to have Node.js installed on your machine.**
+
 Start by cloning the project to your own machine and then install the packages by using npm.
 
 ```bash
